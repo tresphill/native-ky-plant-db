@@ -16,7 +16,7 @@ def get_db():
     finally:
         db.close()
 
-@router.get("/all", response_model=List[schemas.MenuSchema])
+@router.get("/all", response_model=List[schemas.NativePlantSchema])
 def get_items(db: Session = Depends(get_db)):
-    items = crud.get_menu_items(db)
+    items = crud.get_plant_db_items(db)
     return items
