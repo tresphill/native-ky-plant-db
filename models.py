@@ -6,14 +6,14 @@ from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, Text, Table
 class Base(DeclarativeBase):
     pass
 
-class Menu(Base):
-    __tablename__ = "Menu"
+class PlantDb(Base):
+    __tablename__ = "Native Kentucky Plants"
 
     id: Mapped[int] = mapped_column(primary_key = True, index = True)
-    title: Mapped[str] = Column(String, default="Title")
-    description: Mapped[str] = Column(String, default="Description")
-    price: Mapped[int] = Column(Integer, default="Price")
-    spicy_level: Mapped[int] = Column(Integer, default="Spiciness")
+    bot_name: Mapped[str] = Column(String, default="Botanical Name")
+    com_name: Mapped[str] = Column(String, default="Common Name")
+    exposure: Mapped[int] = Column(Integer, default="Exposure")
+    zone: Mapped[int] = Column(Integer, default="Zone")
 
     def __repr__(self) -> str:
-        return f"MenuItem(id={self.id!r}, title={self.title!r}, desciption={self.description!r}, price={self.price!r}, spicy_level={self.spicy_level!r})"
+        return f"PlantDb(id={self.id!r}, bot_name={self.bot_name!r}, com_name={self.com_name!r}, exposure={self.exposure!r}, zone={self.zone!r})"

@@ -3,10 +3,10 @@ from sqlalchemy.orm import Session
 from fastapi import APIRouter, Depends, HTTPException, status
 import schemas
 import crud
-from database import SessionLocal
+from session import SessionLocal
 
 router = APIRouter(
-    prefix="/menu-items"
+    prefix="/native-ky-plants"
 )
 
 def get_db():

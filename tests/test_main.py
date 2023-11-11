@@ -9,7 +9,7 @@ import sys
 # position 1 in sys.path
 sys.path.insert(1, '/workspace/fastapi-rest/')    
 
-from app import app
+from main import app
 
 def test_read_main():
     client = TestClient(app)

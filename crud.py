@@ -4,8 +4,8 @@ from schemas import *
 from sqlalchemy import and_, or_
 
 # read
-def get_menu_items(db: Session):
-    menu_items_query = (
-        db.query(Menu).all()
+def get_plant_db_items(db: Session):
+    plant_db_query = (
+        db.query(PlantDb).all()
     )
-    return menu_items_query
+    return plant_db_query

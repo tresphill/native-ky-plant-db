@@ -7,14 +7,7 @@ class Base(BaseModel):
 
 class MenuSchema(Base):
     id: int
-    title: str | None
-    description: str | None
-    price: int | None
-    spicy_level: int | None
-    
-
-
-
-# menu model
-# category model
-# cuisine model
+    bot_name: str | None
+    com_name: str | None
+    exposure: int | None
+    zone: int | None
