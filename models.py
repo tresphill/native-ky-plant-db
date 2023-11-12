@@ -9,7 +9,7 @@ class Base(DeclarativeBase):
 class PlantDb(Base):
     __tablename__ = "Native Kentucky Plants"
 
-    id: Mapped[int] = mapped_column(primary_key = True, index = True)
+    id: Mapped[int] = mapped_column(primary_key = True, index = True, autoincrement="True")
     bot_name: Mapped[str] = Column(String, default="Botanical Name")
     com_name: Mapped[str] = Column(String, default="Common Name")
     exposure: Mapped[int] = Column(Integer, default="Exposure")
