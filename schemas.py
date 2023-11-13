@@ -5,7 +5,7 @@ from models import Base
 class Base(BaseModel):
     pass
 
-class MenuSchema(Base):
+class NativePlantSchema(Base):
     id: int
     bot_name: str | None
     com_name: str | None
