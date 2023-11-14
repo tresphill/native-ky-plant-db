@@ -7,13 +7,13 @@ class Base(DeclarativeBase):
     pass
 
 class PlantDb(Base):
-    __tablename__ = "Native Kentucky Plants"
+    __tablename__ = "plants"
 
     id: Mapped[int] = mapped_column(primary_key = True, index = True, autoincrement="True")
     bot_name: Mapped[str] = Column(String, default="Botanical Name")
     com_name: Mapped[str] = Column(String, default="Common Name")
     exposure: Mapped[int] = Column(Integer, default="Exposure")
-    zone: Mapped[int] = Column(Integer, default="Zone")
+    climate_zone: Mapped[int] = Column(Integer, default="Zone")
 
     def __repr__(self) -> str:
-        return f"PlantDb(id={self.id!r}, bot_name={self.bot_name!r}, com_name={self.com_name!r}, exposure={self.exposure!r}, zone={self.zone!r})"
+        return f"PlantDb(id={self.id!r}, bot_name={self.bot_name!r}, com_name={self.com_name!r}, exposure={self.exposure!r}, climate_zone={self.climate_zonezone!r})"

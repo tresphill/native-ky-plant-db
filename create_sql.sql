@@ -1,3 +1,5 @@
+DROP TABLE plants;
+
 CREATE TABLE IF NOT EXISTS plants (
   id SERIAL PRIMARY KEY,
   bot_name VARCHAR(255),

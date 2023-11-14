@@ -9,5 +9,5 @@ class NativePlantSchema(Base):
     id: int
     bot_name: str | None
     com_name: str | None
-    exposure: int | None
-    zone: int | None
+    exposure: str | None
+    climate_zone: str | None
